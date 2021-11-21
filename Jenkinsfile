@@ -1,9 +1,13 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile true
+  }
   stages {
-    stage('build') {
+    stage('Example') {
       steps {
         echo 'test pipeline message'
+        echo 'test = $test'
+        
       }
     }
 
