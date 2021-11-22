@@ -1,0 +1,28 @@
+
+  
+pipeline {
+  agent { dockerfile true }
+  stages {
+      
+    stage('prepare') {
+        steps {
+         git "https://github.com/brownman/node-hello.git"
+
+        }
+    }
+    stage("build") {
+      steps {
+        sh """
+          docker build -t hello_there .
+        """
+      }
+    }
+    stage("run") {
+      steps {
+        sh """
+          docker run --rm hello_there
+        """
+      }
+    }
+  }
+}
