@@ -8,8 +8,7 @@ pipeline {
             steps {
                 script {
                     test_branch()
-                    test_try_catch()
-                }
+                 }
             }
         }
     }
