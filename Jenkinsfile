@@ -16,7 +16,7 @@ pipeline {
     }
     stage('prepare') {
       steps{
-      git "https://github.com/brownman/node-hello.git"
+      git url:"https://github.com/brownman/node-hello.git"
       sh "ls -la;env"
       
 
