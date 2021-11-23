@@ -12,9 +12,10 @@ pipeline {
                     test_try_catch()
                  }
             }
-        }
-    }
-}
+        }//stage
+     
+    }//stages
+}//pipeline
 def test_function() { println("hello World")}
 def test_branch(){
         if (env.BRANCH_NAME == 'master') {
