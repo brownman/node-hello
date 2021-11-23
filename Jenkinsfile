@@ -62,5 +62,35 @@ pipeline {
                 }
             }
         } //stage
+        
+        
+//    post {
+//       // always {
+
+//       //  }
+//       success {
+//          sh "echo 'Pipeline reached the finish line!'"
+
+//          // Notify in Slack
+//          slackSend color: 'yellow', message: "Pipeline operation completed successfully. Check <reducted>"
+//       }
+//       failure {
+//          sh "echo 'Pipeline failed'"
+//          // Notify in Slack
+//          slackSend color: 'red', message: "Pipeline operation failed!"
+
+//          //Clean the execution workspace
+//          //deleteDir()
+//       }
+// //       unstable {
+// //          sh "echo 'Pipeline unstable :-('"
+// //       }
+//       // changed {
+//       //    sh "echo 'Pipeline was previously failing but is now successful.'"
+//       // }
+//    }
+        
+        
+        
     } // stages
 }
