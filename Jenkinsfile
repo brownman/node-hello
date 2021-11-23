@@ -31,7 +31,7 @@ pipeline {
             agent {
                 docker { image "${DOCKERHUB_CREDENTIALS_USR}/${repo_name}:${tag}" }
             }
-            script {
+            node {
                 docker.image('node:10-stretch').inside { c ->
                         echo 'Building..'
                         sh 'npm install'
