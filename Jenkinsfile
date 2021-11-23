@@ -29,6 +29,15 @@ pipeline {
         
         }
     }
+            stage('test') {
+            agent {
+              docker { image "${DOCKERHUB_CREDENTIALS_USR}/${repo_name}:${tag}" }
+            }
+            steps {
+                sh 'npm run test'
+            }
+        }
+    
     
         stage('Login'){
         steps {
